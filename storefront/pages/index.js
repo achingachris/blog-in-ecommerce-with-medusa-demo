@@ -1,21 +1,21 @@
-import styles from "../styles/home.module.css";
-import Link from "next/link";
-import { createClient } from "../utils/client";
-import { FaGithub } from "react-icons/fa";
-import { formatPrices } from "../utils/prices";
-import { useContext } from "react";
-import StoreContext from "../context/store-context";
+import styles from '../styles/home.module.css'
+import Link from 'next/link'
+import { createClient } from '../utils/client'
+import { FaGithub } from 'react-icons/fa'
+import { formatPrices } from '../utils/prices'
+import { useContext } from 'react'
+import StoreContext from '../context/store-context'
 
 export default function Home({ products }) {
   const { cart } = useContext(StoreContext)
-  
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.hero}>
           <h1 className={styles.title}>
-            Medusa + Next.js Starter{" "}
-            <span role="img" aria-label="Rocket emoji">
+            Medusa + Next.js Starter{' '}
+            <span role='img' aria-label='Rocket emoji'>
               🚀
             </span>
           </h1>
@@ -25,44 +25,44 @@ export default function Home({ products }) {
             best-in-breed commerce stack.
           </p>
           <div className={styles.tags}>
-            <div className={styles.tag} style={{ background: "lightgrey" }}>
+            <div className={styles.tag} style={{ background: 'lightgrey' }}>
               v{process.env.NEXT_PUBLIC_APP_VERSION}
             </div>
             <a
-              href="https://www.medusa-commerce.com/"
-              arget="_blank"
-              rel="noreferrer"
-              role="button"
+              href='https://www.medusa-commerce.com/'
+              arget='_blank'
+              rel='noreferrer'
+              role='button'
             >
               <div
                 className={styles.tag}
-                style={{ background: "var(--logo-color-900)", color: "white" }}
+                style={{ background: 'var(--logo-color-900)', color: 'white' }}
               >
                 Medusa
               </div>
             </a>
             <a
-              href="https://nextjs.org/docs/getting-started"
-              target="_blank"
-              rel="noreferrer"
-              role="button"
+              href='https://nextjs.org/docs/getting-started'
+              target='_blank'
+              rel='noreferrer'
+              role='button'
             >
               <div
                 className={styles.tag}
-                style={{ background: "#111111", color: "white" }}
+                style={{ background: '#111111', color: 'white' }}
               >
                 Next.js
               </div>
             </a>
             <a
-              href="https://stripe.com/docs"
-              target="_blank"
-              rel="noreferrer"
-              role="button"
+              href='https://stripe.com/docs'
+              target='_blank'
+              rel='noreferrer'
+              role='button'
             >
               <div
                 className={styles.tag}
-                style={{ background: "#4379FF", color: "white" }}
+                style={{ background: '#4379FF', color: 'white' }}
               >
                 Stripe
               </div>
@@ -70,30 +70,30 @@ export default function Home({ products }) {
           </div>
           <div className={styles.links}>
             <a
-              href="https://docs.medusa-commerce.com/"
-              target="_blank"
-              rel="noreferrer"
-              role="button"
+              href='https://docs.medusa-commerce.com/'
+              target='_blank'
+              rel='noreferrer'
+              role='button'
               className={styles.btn}
             >
               Read the docs
               <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+                stroke='currentColor'
+                fill='currentColor'
+                strokeWidth='0'
+                viewBox='0 0 24 24'
+                height='1em'
+                width='1em'
+                xmlns='http://www.w3.org/2000/svg'
               >
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
+                <path d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'></path>
               </svg>
             </a>
             <a
-              href="https://github.com/medusajs/nextjs-starter-medusa"
-              target="_blank"
-              rel="noreferrer"
-              role="button"
+              href='https://github.com/medusajs/nextjs-starter-medusa'
+              target='_blank'
+              rel='noreferrer'
+              role='button'
               className={styles.btn}
             >
               View on GitHub
@@ -120,22 +120,22 @@ export default function Home({ products }) {
                       </a>
                     </Link>
                   </div>
-                );
+                )
               })}
           </div>
         </div>
       </main>
     </div>
-  );
+  )
 }
 
 export const getStaticProps = async () => {
-  const client = createClient();
-  const { products } = await client.products.list();
+  const client = createClient()
+  const { products } = await client.products.list()
 
   return {
     props: {
       products,
     },
-  };
-};
+  }
+}
