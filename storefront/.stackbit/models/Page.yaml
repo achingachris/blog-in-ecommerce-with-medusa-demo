@@ -1,0 +1,12 @@
+name: Page
+layout: Page
+hideContent: true
+fields:
+  - type: string
+    name: title
+    default: This is a new post by Medusa
+    required: true
+  - type: markdown
+    name: body
+    default: # start writing noew
+    required: true
