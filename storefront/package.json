@@ -2,7 +2,7 @@
   "name": "medusa-nextjs-starter",
   "version": "0.1.0",
   "private": true,
-  "author": "Kasper Fabricius Kristensen <kasper@medusa-commmerce.com> (https://www.medusa-commerce.com)",
+  "author": "chris",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
@@ -11,19 +11,27 @@
   },
   "dependencies": {
     "@medusajs/medusa-js": "^1.0.3",
+    "@stackbit/annotations": "^0.1.2",
     "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.15.1",
     "axios": "^0.21.3",
     "formik": "^2.2.9",
+    "markdown-to-jsx": "^7.1.7",
     "next": "^11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-spinners": "^0.11.0",
+    "sourcebit": "^0.11.1",
+    "sourcebit-source-filesystem": "^0.2.0",
+    "sourcebit-target-next": "^0.8.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@stackbit/cli": "^0.2.17",
     "eslint": "7.29.0",
-    "eslint-config-next": "11.0.0"
+    "eslint-config-next": "11.0.0",
+    "npm-run-all": "^4.1.5",
+    "open": "^8.4.0"
   }
 }
