@@ -1,0 +1,26 @@
+{
+    "name": "blog-in-ecommerce-with-medusa-demo",
+    "version": "1.0.0",
+    "description": "## Create Medusa Store",
+    "main": "index.js",
+    "scripts": {
+      "client": "npm run dev --prefix storefront",
+      "server": "npm start --prefix my-medusa-store",
+      "stackbit:run": "stackbit dev --prefix storefront",
+      "demo": "concurrently \"npm run server\" \"npm run client\" \"npm run stackbit:run\""
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/achingachris/blog-in-ecommerce-with-medusa-demo.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/achingachris/blog-in-ecommerce-with-medusa-demo/issues"
+    },
+    "homepage": "https://github.com/achingachris/blog-in-ecommerce-with-medusa-demo#readme",
+    "dependencies": {
+      "concurrently": "^7.1.0"
+    }
+  }
